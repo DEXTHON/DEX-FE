@@ -1,0 +1,114 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #fff;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.button {
+  padding: 5px 15px;
+  background-color: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+.event-dropdown {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.main {
+  display: flex;
+  flex-direction: column; /* Always stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.grid-container, .status-container {
+  width: 100%; /* Take full width of its parent */
+  max-width: 500px; /* Max width for larger screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5열 */
+  grid-auto-rows: 60px; /* 각 행 높이 고정 */
+  gap: 4px;
+
+  background-image: 
+    radial-gradient(circle at 80% 60%, #fd1900 10%, transparent 40%),
+    radial-gradient(circle at 20% 30%, #f39c12 20%, transparent 30%),
+    linear-gradient(to bottom right, #2ecc71, #00ff62);
+
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+
+  aspect-ratio: unset; /* 비율 해제 */
+  overflow: hidden;
+}
+
+.cell {
+  background-color: #fff;
+  border: 1px solid #999;
+  width: 100%;
+  height: 100%; /* 그리드 행 높이에 맞게 채움 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  /* aspect-ratio 제거 */
+}
+
+.box-title {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+
+.status-box {
+  width: 100%; /* Take full width of its container */
+  max-width: 500px; /* Match grid-box max-width */
+  aspect-ratio: 5 / 6; /* Match grid-box aspect ratio */
+  background-color: #f0f0f0; /* Single gray color */
+  display: flex; /* Change back to flex for centering content */
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  margin-top: 20px; /* Add some space above the status box */
+}
+
+.status-text {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px; /* Add space above the text */
+}
+
+/* Adjust max-width for smaller screens if desired */
+@media (max-width: 768px) {
+  .grid-container, .status-container {
+    max-width: 90%; /* Adjust max-width for smaller screens */
+  }
+}
