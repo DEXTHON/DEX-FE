@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // useNavigate 임포트
 import './AdminPage.css'; // AdminPage 전용 CSS 파일
 
 const AdminPage = () => {
   const [eventName, setEventName] = useState('');
   const [location, setLocation] = useState('');
   const [imageUri, setImageUri] = useState(null);
+  const navigate = useNavigate(); // useNavigate 훅 초기화
 
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files[0]) {
@@ -20,6 +22,10 @@ const AdminPage = () => {
     console.log('장소:', location);
     console.log('이미지 URI:', imageUri);
     alert('행사가 등록되었습니다!');
+  };
+
+  const handleNavigateToAdmintag = () => {
+    navigate('/admintag'); // Admintag 페이지로 이동
   };
 
   return (
@@ -68,6 +74,7 @@ const AdminPage = () => {
       <button className="submit-button" onClick={handleSubmit}>
         등록하기
       </button>
+      <button className="form-button" onClick={handleNavigateToAdmintag}>업체 등록하기</button>
     </div>
   );
 };

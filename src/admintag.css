@@ -1,0 +1,152 @@
+.company-form {
+  width: 90%; /* 화면 너비의 90%를 사용하도록 설정 */
+  margin: 40px auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.form-title {
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-label {
+  display: block;
+  margin: 20px 0 10px;
+  font-weight: 500;
+  font-size: 1.2em; /* 폰트 크기 키우기 */
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 15px; /* 패딩을 늘려 크기 키우기 */
+  border: none;
+  border-radius: 8px;
+  background-color: #dcdcdc;
+  font-size: 1.1em; /* 폰트 크기 키우기 */
+  box-sizing: border-box; /* 추가 */
+}
+
+.form-textarea {
+  height: 250px; /* 높이 키우기 */
+  resize: vertical; /* 세로 크기 조절 가능하게 변경 */
+}
+
+.image-upload-button {
+  display: block;
+  width: 100%;
+  height: 200px; /* 원하는 높이로 조절 */
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 이미지가 박스를 넘어가지 않도록 */
+}
+
+.image-placeholder-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder-text {
+  color: #888;
+  font-size: 1.2em;
+}
+
+.uploaded-image-preview {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 이미지가 비율을 유지하면서 박스에 맞게 */
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between; /* 요소들 사이에 공간을 균등하게 분배 */
+  gap: 20px; /* 요소들 사이의 간격 */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1; /* 사용 가능한 공간을 균등하게 차지 */
+}
+
+.form-button {
+  margin-top: 30px;
+  padding: 40px 100px;
+  background-color: #dcdcdc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+  font-size: 2em; /* 폰트 크기 키우기 */
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .company-form {
+    width: 95%; /* 작은 화면에서 너비 증가 */
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 1.5em; /* 제목 폰트 크기 조정 */
+  }
+
+  .form-label {
+    font-size: 1em; /* 라벨 폰트 크기 조정 */
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    padding: 12px; /* 입력 필드 패딩 조정 */
+    font-size: 1em; /* 입력 필드 폰트 크기 조정 */
+  }
+
+  .form-textarea {
+    height: 180px; /* 텍스트 영역 높이 조정 */
+  }
+
+  .image-upload-button {
+    height: 150px; /* 이미지 업로드 버튼 높이 조정 */
+  }
+
+  .image-placeholder-text {
+    font-size: 1em; /* 이미지 플레이스홀더 텍스트 크기 조정 */
+  }
+
+  .form-row {
+    flex-direction: column; /* 작은 화면에서 세로로 쌓이도록 변경 */
+    gap: 15px; /* 세로로 쌓일 때 간격 조정 */
+  }
+
+  .form-group {
+    flex: none; /* flex 속성 제거 */
+    width: 100%; /* 너비를 100%로 설정 */
+  }
+
+  .form-button {
+    padding: 20px 50px; /* 버튼 패딩 조정 */
+    font-size: 1.5em; /* 버튼 폰트 크기 조정 */
+    float: none; /* float 속성 제거 */
+    width: 100%; /* 너비를 100%로 설정 */
+    margin-top: 20px;
+  }
+}

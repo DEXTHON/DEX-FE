@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 import AdminPage from './AdminPage.js';
+import CompanyForm from './Admintag.js'; // Admintag 컴포넌트 임포트
+import AdminForm from './adminform.js'; // AdminForm 컴포넌트 임포트
+import NFTPage from './NFTPage.js'; // NFTPage 컴포넌트 임포트
 
 function App() {
   const [status, setStatus] = useState('안전');
@@ -94,6 +97,9 @@ function App() {
           </>
         } />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/admintag" element={<CompanyForm />} /> {/* Admintag 라우트 추가 */}
+        <Route path="/adminform" element={<AdminForm />} /> {/* AdminForm 라우트 추가 */}
+        <Route path="/nft" element={<NFTPage />} /> {/* NFTPage 라우트 추가 */}
       </Routes>
     </div>
   );
